@@ -54,60 +54,60 @@ let isSoundEnabled = false;
 // ================= INITIALIZATION =================
 function init() {
     CONFIG.typewriterMessages = [
-    `Happy New Month, ${CONFIG.herName} ✨`,
-    "May this month bring you endless joy,",
-    "peace that settles deep in your soul,",
-    "and victories that make you proud.",
-    "You deserve every beautiful moment coming your way 💖",
+        `Happy New Month, ${CONFIG.herName} ✨`,
+        "May this month bring you endless joy,",
+        "peace that settles deep in your soul,",
+        "and victories that make you proud.",
+        "You deserve every beautiful moment coming your way 💖",
 
-    "But beyond wishes…",
-    "I want you to remember something important.",
+        "But beyond wishes…",
+        "I want you to remember something important.",
 
-    "You are stronger than the days that try to break you.",
-    "Kinder than the world sometimes deserves.",
-    "And more beautiful than you ever give yourself credit for.",
+        "You are stronger than the days that try to break you.",
+        "Kinder than the world sometimes deserves.",
+        "And more beautiful than you ever give yourself credit for.",
 
-    "Even on the days you feel tired,",
-    "or unsure,",
-    "or quietly overwhelmed…",
-    "you are still enough.",
-    "More than enough.",
+        "Even on the days you feel tired,",
+        "or unsure,",
+        "or quietly overwhelmed…",
+        "you are still enough.",
+        "More than enough.",
 
-    "I hope this month reminds you of your worth.",
-    "That you never have to shrink to be loved.",
-    "That your heart, your laughter,",
-    "and even your silence…",
-    "are all precious.",
+        "I hope this month reminds you of your worth.",
+        "That you never have to shrink to be loved.",
+        "That your heart, your laughter,",
+        "and even your silence…",
+        "are all precious.",
 
-    "If this month brings challenges,",
-    "I hope it also brings strength.",
-    "If it brings tears,",
-    "I hope it brings arms that hold you close which are mine.",
-    "And if it brings joy…",
-    "I hope it stays longer than expected.",
+        "If this month brings challenges,",
+        "I hope it also brings strength.",
+        "If it brings tears,",
+        "I hope it brings arms that hold you close which are mine.",
+        "And if it brings joy…",
+        "I hope it stays longer than expected.",
 
-    "Thank you for being you.",
-    "For existing in this world.",
-    "For being someone my heart genuinely cares about.",
+        "Thank you for being you.",
+        "For existing in this world.",
+        "For being someone my heart genuinely cares about.",
 
-    "This month,",
-    "and every month after…",
-    "I hope you feel loved.",
-    "Seen.",
-    "And never alone 💕",
-    "I love you baby so much💕"
+        "This month,",
+        "and every month after…",
+        "I hope you feel loved.",
+        "Seen.",
+        "And never alone 💕",
+        "I love you so much baby💕"
     ];
-    
+
     CONFIG.celebrationMessage = `Welcome to the best month with me. I can't wait to make every moment special with you, ${CONFIG.herName}. This is just the beginning of our beautiful story.`;
-    
+
     document.querySelector('.month-badge').textContent = CONFIG.currentMonth;
     elements.newMonthGreeting.textContent = `Happy New Month, ${CONFIG.herName}`;
     buttons.no.disabled = true;
     buttons.no.style.cursor = 'not-allowed';
-    
+
     setupEventListeners();
     toggleSound(false);
-    
+
     setTimeout(() => {
         if (currentScene === 'scene2') {
             typeNextMessage();
@@ -124,7 +124,7 @@ function setupEventListeners() {
     buttons.no.addEventListener('click', (e) => e.preventDefault());
     buttons.replay.addEventListener('click', resetExperience);
     buttons.soundToggle.addEventListener('click', () => toggleSound(!isSoundEnabled));
-    
+
     document.addEventListener('click', () => {
         if (!isSoundEnabled) toggleSound(true);
     }, { once: true });
@@ -136,18 +136,18 @@ function resetExperience() {
     typewriterIndex = 0;
     charIndex = 0;
     isTyping = false;
-    
+
     Object.values(scenes).forEach(scene => scene.classList.remove('active'));
     scenes.scene1.classList.add('active');
-    
+
     elements.typewriter.innerHTML = '';
     elements.wishesContainer.innerHTML = '';
     elements.confettiContainer.innerHTML = '';
-    
+
     buttons.yes.disabled = false;
     buttons.no.disabled = true;
     buttons.no.style.cursor = 'not-allowed';
-    
+
     elements.celebrationSound.pause();
     elements.celebrationSound.currentTime = 0;
 }
@@ -157,8 +157,8 @@ function switchScene(targetScene) {
     scenes[currentScene].classList.remove('active');
     scenes[targetScene].classList.add('active');
     currentScene = targetScene;
-    
-    switch(targetScene) {
+
+    switch (targetScene) {
         case 'scene2':
             setTimeout(() => {
                 typewriterIndex = 0;
@@ -180,12 +180,12 @@ function switchScene(targetScene) {
 // ================= TYPEWRITER EFFECT =================
 function typeNextMessage() {
     if (typewriterIndex >= CONFIG.typewriterMessages.length) return;
-    
+
     isTyping = true;
     const message = CONFIG.typewriterMessages[typewriterIndex];
     elements.typewriter.innerHTML = '';
     charIndex = 0;
-    
+
     const typeInterval = setInterval(() => {
         if (charIndex < message.length) {
             elements.typewriter.innerHTML += message.charAt(charIndex);
@@ -194,7 +194,7 @@ function typeNextMessage() {
             clearInterval(typeInterval);
             isTyping = false;
             typewriterIndex++;
-            
+
             setTimeout(() => {
                 if (typewriterIndex < CONFIG.typewriterMessages.length) {
                     elements.typewriter.innerHTML += '<br><br>';
@@ -208,7 +208,7 @@ function typeNextMessage() {
 // ================= WISH CARDS =================
 function createWishCards() {
     elements.wishesContainer.innerHTML = '';
-    
+
     CONFIG.wishes.forEach((wish, index) => {
         setTimeout(() => {
             const card = document.createElement('div');
@@ -223,15 +223,15 @@ function createWishCards() {
 // ================= YES BUTTON HANDLER =================
 function handleYesClick() {
     buttons.yes.disabled = true;
-    
+
     if (isSoundEnabled) {
         elements.celebrationSound.currentTime = 0;
         elements.celebrationSound.play().catch(e => console.log("Audio play failed"));
     }
-    
+
     createConfetti(120);
     createHeartBurst();
-    
+
     setTimeout(() => {
         elements.celebrationText.textContent = CONFIG.celebrationMessage;
         switchScene('scene5');
@@ -241,7 +241,7 @@ function handleYesClick() {
 // ================= ANIMATIONS =================
 function createConfetti(count) {
     elements.confettiContainer.innerHTML = '';
-    
+
     for (let i = 0; i < count; i++) {
         setTimeout(() => {
             const confetti = document.createElement('div');
@@ -256,7 +256,7 @@ function createConfetti(count) {
             const delay = Math.random() * 1;
             confetti.style.animation = `confettiFall ${duration}s linear ${delay}s forwards`;
             elements.confettiContainer.appendChild(confetti);
-            
+
             setTimeout(() => {
                 if (confetti.parentNode) confetti.remove();
             }, (duration + delay) * 1000);
