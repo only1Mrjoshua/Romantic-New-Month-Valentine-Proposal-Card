@@ -95,6 +95,48 @@ function init() {
         "I hope you feel loved.",
         "Seen.",
         "And never alone 💕",
+
+        // Happy Sunday
+        "Also… happy Sunday, my love 🤍",
+        "I hope today wraps you in calm,",
+        "soft moments,",
+        "and gentle peace.",
+        "May your heart rest today,",
+        "and may your mind feel lighter than it did yesterday.",
+
+        // Prayers for her
+        "I pray this month covers you with grace.",
+        "That every step you take is guided.",
+        "That doors meant for you open easily,",
+        "and doors not meant for you close quietly.",
+        "I pray for peace over your heart,",
+        "strength in moments you feel weak,",
+        "and joy that finds you even on ordinary days.",
+        "May God protect you,",
+        "uplift you,",
+        "and surround you with love...especially mine 🤍",
+
+        // Comfort during period pains
+        "And right now…",
+        "I know your body hurts.",
+        "I wish I could take the pain away myself.",
+        "So please remember this:",
+        "you’re not weak for needing rest.",
+        "you’re not dramatic for feeling pain.",
+        "your body is just asking for gentleness.",
+        "I’m so proud of you for enduring it quietly.",
+        "I hope the cramps ease.",
+        "I hope your body relaxes.",
+        "And I hope you feel held,",
+        "even if it’s just through these words.",
+        "I’m right here with you, always.",
+
+        // Closing reassurance
+        "This Sunday,",
+        "this month,",
+        "and every season of your life…",
+        "you don’t walk alone.",
+        "My heart walks with you 💕",
         "I love you so much baby💕"
     ];
 
