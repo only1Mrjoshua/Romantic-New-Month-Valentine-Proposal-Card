@@ -82,7 +82,7 @@ function init() {
     "If this month brings challenges,",
     "I hope it also brings strength.",
     "If it brings tears,",
-    "I hope it brings arms that hold you close.",
+    "I hope it brings arms that hold you close which are mine.",
     "And if it brings joy…",
     "I hope it stays longer than expected.",
 
@@ -95,7 +95,7 @@ function init() {
     "I hope you feel loved.",
     "Seen.",
     "And never alone 💕",
-    "I love you baby 💕"
+    "I love you baby so much💕"
     ];
     
     CONFIG.celebrationMessage = `Welcome to the best month with me. I can't wait to make every moment special with you, ${CONFIG.herName}. This is just the beginning of our beautiful story.`;
