@@ -54,11 +54,48 @@ let isSoundEnabled = false;
 // ================= INITIALIZATION =================
 function init() {
     CONFIG.typewriterMessages = [
-        `Happy New Month, ${CONFIG.herName} ✨`,
-        "May this month bring you endless joy,",
-        "peace that settles deep in your soul,",
-        "and victories that make you proud.",
-        "You deserve every beautiful moment coming your way 💖"
+    `Happy New Month, ${CONFIG.herName} ✨`,
+    "May this month bring you endless joy,",
+    "peace that settles deep in your soul,",
+    "and victories that make you proud.",
+    "You deserve every beautiful moment coming your way 💖",
+
+    "But beyond wishes…",
+    "I want you to remember something important.",
+
+    "You are stronger than the days that try to break you.",
+    "Kinder than the world sometimes deserves.",
+    "And more beautiful than you ever give yourself credit for.",
+
+    "Even on the days you feel tired,",
+    "or unsure,",
+    "or quietly overwhelmed…",
+    "you are still enough.",
+    "More than enough.",
+
+    "I hope this month reminds you of your worth.",
+    "That you never have to shrink to be loved.",
+    "That your heart, your laughter,",
+    "and even your silence…",
+    "are all precious.",
+
+    "If this month brings challenges,",
+    "I hope it also brings strength.",
+    "If it brings tears,",
+    "I hope it brings arms that hold you close.",
+    "And if it brings joy…",
+    "I hope it stays longer than expected.",
+
+    "Thank you for being you.",
+    "For existing in this world.",
+    "For being someone my heart genuinely cares about.",
+
+    "This month,",
+    "and every month after…",
+    "I hope you feel loved.",
+    "Seen.",
+    "And never alone 💕",
+    "I love you baby 💕"
     ];
     
     CONFIG.celebrationMessage = `Welcome to the best month with me. I can't wait to make every moment special with you, ${CONFIG.herName}. This is just the beginning of our beautiful story.`;
@@ -163,9 +200,9 @@ function typeNextMessage() {
                     elements.typewriter.innerHTML += '<br><br>';
                     typeNextMessage();
                 }
-            }, 1000);
+            }, 1500);
         }
-    }, 50);
+    }, 100);
 }
 
 // ================= WISH CARDS =================

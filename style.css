@@ -232,13 +232,18 @@ body {
     padding: 30px;
     margin: 30px 0;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .typewriter {
     font-size: 1.3rem;
     line-height: 1.6;
-    min-height: 120px;
     color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    width: 100%;
 }
 
 /* Scene 3 - Added padding */
