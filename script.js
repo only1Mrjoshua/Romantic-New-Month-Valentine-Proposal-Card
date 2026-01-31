@@ -29,7 +29,7 @@ const elements = {
 
 // ================= CONFIGURATION =================
 const CONFIG = {
-    herName: "My Love",
+    herName: "Ifemi💝",
     myName: "Yours Always",
     currentMonth: new Date().toLocaleString('default', { month: 'long' }),
     typewriterMessages: [],
@@ -54,7 +54,7 @@ let isSoundEnabled = false;
 // ================= INITIALIZATION =================
 function init() {
     CONFIG.typewriterMessages = [
-        `Happy New Month, my beautiful ${CONFIG.herName} ✨`,
+        `Happy New Month, ${CONFIG.herName} ✨`,
         "May this month bring you endless joy,",
         "peace that settles deep in your soul,",
         "and victories that make you proud.",
