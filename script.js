@@ -30,7 +30,7 @@ const elements = {
 // ================= CONFIGURATION =================
 const CONFIG = {
     herName: "Ifemi💝",
-    myName: "Yours Always",
+    myName: "Ayomi 💖",
     currentMonth: new Date().toLocaleString('default', { month: 'long' }),
     typewriterMessages: [],
     wishes: [
