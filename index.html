@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For You 💌 | New Month + Valentine</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Scene 1: Unlock -->
+      <div id="scene1" class="scene active">
+        <div class="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body">
+            <h1 class="title-glow">A small surprise for you 💖</h1>
+            <p class="subtitle">A message to welcome the new month</p>
+            <button id="unlockBtn" class="btn-primary pulse">
+              <span class="btn-text">Tap to open</span>
+              <span class="heart-icon">💝</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 2: New Month Reveal -->
+      <div id="scene2" class="scene">
+        <div class="scene-content">
+          <div class="month-badge">February</div>
+          <h1 class="big-title">
+            <span class="text-reveal" id="newMonthGreeting"></span>
+            <span class="sparkle">✨</span>
+          </h1>
+
+          <div class="message-container">
+            <div id="typewriter" class="typewriter"></div>
+          </div>
+
+          <button id="nextBtn1" class="btn-secondary">
+            Continue
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scene 3: New Month Wishes -->
+      <div id="scene3" class="scene">
+        <div class="scene-content">
+          <h2 class="section-title">Blessings for your month</h2>
+          <p class="section-subtitle">May February bring you...</p>
+
+          <div class="wishes-container">
+            <!-- Wishes will be added by JavaScript -->
+          </div>
+
+          <button id="nextBtn2" class="btn-secondary">
+            One more thing...
+            <span class="heart-icon">💖</span>
+          </button>
+        </div>
+
+        <!-- Floating elements background -->
+        <div class="floating-hearts"></div>
+        <div class="floating-stars"></div>
+      </div>
+
+      <!-- Scene 4: Valentine Question -->
+      <div id="scene4" class="scene">
+        <div class="scene-content">
+          <h2 class="valentine-question">
+            <span class="heart-pulse">💗</span>
+            Will you be my Valentine?
+            <span class="heart-pulse">💗</span>
+          </h2>
+
+          <div class="buttons-container">
+            <button id="yesBtn" class="btn-yes">
+              YES
+              <span class="btn-glow"></span>
+            </button>
+            <button id="noBtn" class="btn-no">NO</button>
+          </div>
+
+          <div id="finalMessage" class="final-message hidden">
+            <h3 class="celebration-title">Okay it's official 😌💖</h3>
+            <p class="celebration-text" id="celebrationText"></p>
+            <div class="screenshot-note">This moment is worth keeping 💫</div>
+            <button id="replayBtn" class="btn-replay">
+              <span class="replay-icon">↺</span>
+              Play Again
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio for celebration -->
+    <audio id="celebrationSound" preload="auto">
+      <source
+        src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMQAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAAcAAAcIAACAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/wAAADhJREFUeAHt2DEBAAAAwqD1T20Hb6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgOcAaSIAARj8DAMAAAAASUVORK5CYII="
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <!-- Confetti container -->
+    <div id="confettiContainer"></div>
+
+    <!-- Sound toggle -->
+    <button id="soundToggle" class="sound-toggle" title="Toggle sound">
+      <span class="sound-icon">🔊</span>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
